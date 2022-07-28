@@ -90,7 +90,7 @@ public class CSUINavigationController: UINavigationController {
         self.customizeBackButton(icon: vc.iconBackButton)
         self.hiddenNavigation(false)
         self.removeNavigationImage()
-      case is BSClearNavigationBarTheme:
+      case is ClearNavigationTheme:
         self.customizeBackButton(icon: vc.iconBackButton)
         self.hiddenNavigation(false)
         self.removeNavigationImage()

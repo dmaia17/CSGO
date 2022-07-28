@@ -12,7 +12,6 @@ final class CSMainViewControllerViewModel {
   // MARK: - Enums
 
   enum Strings {
-    static let title = "title page"
   }
 
   // MARK: - Private properties  
@@ -20,7 +19,7 @@ final class CSMainViewControllerViewModel {
   private weak var view: CSMainViewControllerViewInterface?
   private let wireframe: CSMainViewControllerWireframeInterface
   
-  let navTitle = Strings.title
+  let navTitle = ""
     
   // MARK: - Lifecycle
 

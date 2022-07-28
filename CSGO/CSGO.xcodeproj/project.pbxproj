@@ -10,8 +10,6 @@
 		0AEBBC92F4B8DB426AF76B8F /* Pods_CSGO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB3097389FA6BC23A4B2CB3 /* Pods_CSGO.framework */; };
 		5198D3952892BF2E007531BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3942892BF2E007531BF /* AppDelegate.swift */; };
 		5198D3972892BF2E007531BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3962892BF2E007531BF /* SceneDelegate.swift */; };
-		5198D3992892BF2E007531BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3982892BF2E007531BF /* ViewController.swift */; };
-		5198D39C2892BF2E007531BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5198D39A2892BF2E007531BF /* Main.storyboard */; };
 		5198D39E2892BF30007531BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5198D39D2892BF30007531BF /* Assets.xcassets */; };
 		5198D3A12892BF30007531BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5198D39F2892BF30007531BF /* LaunchScreen.storyboard */; };
 		5198D3AC2892BF31007531BF /* CSGOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3AB2892BF31007531BF /* CSGOTests.swift */; };
@@ -58,8 +56,6 @@
 		5198D3912892BF2E007531BF /* CSGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5198D3942892BF2E007531BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5198D3962892BF2E007531BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5198D3982892BF2E007531BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5198D39B2892BF2E007531BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5198D39D2892BF30007531BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5198D3A02892BF30007531BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5198D3A22892BF30007531BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -152,11 +148,9 @@
 				5198D3C82892BFFA007531BF /* APIs */,
 				5198D3C92892C6BA007531BF /* Architecture */,
 				5198D3C42892BFD5007531BF /* Configurations */,
-				5198D39A2892BF2E007531BF /* Main.storyboard */,
 				5198D3C72892BFF2007531BF /* Models */,
 				5198D3C62892BFE8007531BF /* Modules */,
 				5198D3C52892BFE0007531BF /* Resources */,
-				5198D3982892BF2E007531BF /* ViewController.swift */,
 			);
 			path = CSGO;
 			sourceTree = "<group>";
@@ -392,7 +386,6 @@
 				5198D3E62892D25C007531BF /* CSMainViewControllerViewController.xib in Resources */,
 				5198D3A12892BF30007531BF /* LaunchScreen.storyboard in Resources */,
 				5198D39E2892BF30007531BF /* Assets.xcassets in Resources */,
-				5198D39C2892BF2E007531BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,7 +513,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5198D3992892BF2E007531BF /* ViewController.swift in Sources */,
 				5198D3952892BF2E007531BF /* AppDelegate.swift in Sources */,
 				5198D3CB2892C6E2007531BF /* ViewInterface.swift in Sources */,
 				5198D3E22892D25C007531BF /* CSMainViewControllerInterfaces.swift in Sources */,
@@ -569,14 +561,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5198D39A2892BF2E007531BF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5198D39B2892BF2E007531BF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5198D39F2892BF30007531BF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -715,9 +699,9 @@
 				DEVELOPMENT_TEAM = 36N72V4683;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CSGO/Configurations/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = CSMainViewControllerViewController;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -744,9 +728,9 @@
 				DEVELOPMENT_TEAM = 36N72V4683;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CSGO/Configurations/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = CSMainViewControllerViewController;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

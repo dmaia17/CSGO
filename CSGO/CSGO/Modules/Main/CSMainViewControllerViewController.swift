@@ -27,7 +27,6 @@ final class CSMainViewControllerViewController: UIViewController {
   // MARK: - Class Configurations  
 
   private func viewConfiguration() {
-    title = viewModel.navTitle
   }
 
   // MARK: - UIActions
@@ -39,3 +38,5 @@ final class CSMainViewControllerViewController: UIViewController {
 // MARK: - Extensions
 
 extension CSMainViewControllerViewController: CSMainViewControllerViewInterface { }
+
+extension CSMainViewControllerViewController: ClearNavigationTheme { }

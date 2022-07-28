@@ -7,9 +7,9 @@
 
 import UIKit
 
-public protocol BSClearNavigationBarTheme: Themeable { }
+public protocol ClearNavigationTheme: Themeable { }
 
-public extension BSClearNavigationBarTheme {
+public extension ClearNavigationTheme {
   
   var iconBackButton: UIImage {
     return UIImage.init(named: "") ?? UIImage()
