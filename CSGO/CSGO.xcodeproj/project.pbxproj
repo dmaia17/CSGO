@@ -126,13 +126,13 @@
 		5198D3932892BF2E007531BF /* CSGO */ = {
 			isa = PBXGroup;
 			children = (
-				5198D3942892BF2E007531BF /* AppDelegate.swift */,
-				5198D3962892BF2E007531BF /* SceneDelegate.swift */,
+				5198D3C82892BFFA007531BF /* Services */,
+				5198D3C72892BFF2007531BF /* Models */,
+				5198D3C62892BFE8007531BF /* Modules */,
+				5198D3C52892BFE0007531BF /* Resources */,
+				5198D3C42892BFD5007531BF /* Configurations */,
 				5198D3982892BF2E007531BF /* ViewController.swift */,
 				5198D39A2892BF2E007531BF /* Main.storyboard */,
-				5198D39D2892BF30007531BF /* Assets.xcassets */,
-				5198D39F2892BF30007531BF /* LaunchScreen.storyboard */,
-				5198D3A22892BF30007531BF /* Info.plist */,
 			);
 			path = CSGO;
 			sourceTree = "<group>";
@@ -154,6 +154,46 @@
 			path = CSGOUITests;
 			sourceTree = "<group>";
 		};
+		5198D3C42892BFD5007531BF /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				5198D3A22892BF30007531BF /* Info.plist */,
+				5198D3942892BF2E007531BF /* AppDelegate.swift */,
+				5198D3962892BF2E007531BF /* SceneDelegate.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		5198D3C52892BFE0007531BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5198D39D2892BF30007531BF /* Assets.xcassets */,
+				5198D39F2892BF30007531BF /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5198D3C62892BFE8007531BF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5198D3C72892BFF2007531BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5198D3C82892BFFA007531BF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		F6242E6DD01C880CB72FF98A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +204,6 @@
 				103490913A16FDA5B209D3FB /* Pods-CSGOTests.debug.xcconfig */,
 				07D2EA05F2DBF26C0C975F09 /* Pods-CSGOTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -591,7 +630,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 36N72V4683;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CSGO/Info.plist;
+				INFOPLIST_FILE = CSGO/Configurations/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -620,7 +659,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 36N72V4683;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CSGO/Info.plist;
+				INFOPLIST_FILE = CSGO/Configurations/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
