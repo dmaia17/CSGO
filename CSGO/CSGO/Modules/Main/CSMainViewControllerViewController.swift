@@ -11,6 +11,8 @@ final class CSMainViewControllerViewController: UIViewController {
   
   // MARK: - Outlets
   
+  @IBOutlet weak var tableView: UITableView!
+  
   // MARK: - Class properties
   
   // MARK: - Public properties  
