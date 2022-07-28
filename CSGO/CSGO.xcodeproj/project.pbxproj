@@ -23,6 +23,11 @@
 		5198D3D42892CC18007531BF /* CSUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3D32892CC18007531BF /* CSUINavigationController.swift */; };
 		5198D3D72892CDAF007531BF /* DefaultNavigationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3D62892CDAF007531BF /* DefaultNavigationTheme.swift */; };
 		5198D3D92892CDE7007531BF /* ClearNavigationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3D82892CDE7007531BF /* ClearNavigationTheme.swift */; };
+		5198D3E22892D25C007531BF /* CSMainViewControllerInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3DC2892D25C007531BF /* CSMainViewControllerInterfaces.swift */; };
+		5198D3E32892D25C007531BF /* CSMainViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3DD2892D25C007531BF /* CSMainViewControllerViewModel.swift */; };
+		5198D3E42892D25C007531BF /* CSMainViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3DE2892D25C007531BF /* CSMainViewControllerViewController.swift */; };
+		5198D3E62892D25C007531BF /* CSMainViewControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5198D3E02892D25C007531BF /* CSMainViewControllerViewController.xib */; };
+		5198D3E72892D25C007531BF /* CSMainViewControllerWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3E12892D25C007531BF /* CSMainViewControllerWireframe.swift */; };
 		A4FA9148AB7178B77FFA05A9 /* Pods_CSGOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2DFECC2018D9501F6CEDCE /* Pods_CSGOTests.framework */; };
 		A8ED30BFF3F039D6FF14829E /* Pods_CSGO_CSGOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3023795CA06AC18F872690D /* Pods_CSGO_CSGOUITests.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +74,11 @@
 		5198D3D32892CC18007531BF /* CSUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSUINavigationController.swift; sourceTree = "<group>"; };
 		5198D3D62892CDAF007531BF /* DefaultNavigationTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigationTheme.swift; sourceTree = "<group>"; };
 		5198D3D82892CDE7007531BF /* ClearNavigationTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearNavigationTheme.swift; sourceTree = "<group>"; };
+		5198D3DC2892D25C007531BF /* CSMainViewControllerInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSMainViewControllerInterfaces.swift; sourceTree = "<group>"; };
+		5198D3DD2892D25C007531BF /* CSMainViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSMainViewControllerViewModel.swift; sourceTree = "<group>"; };
+		5198D3DE2892D25C007531BF /* CSMainViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSMainViewControllerViewController.swift; sourceTree = "<group>"; };
+		5198D3E02892D25C007531BF /* CSMainViewControllerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSMainViewControllerViewController.xib; sourceTree = "<group>"; };
+		5198D3E12892D25C007531BF /* CSMainViewControllerWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSMainViewControllerWireframe.swift; sourceTree = "<group>"; };
 		5EB3097389FA6BC23A4B2CB3 /* Pods_CSGO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSGO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C681A256AFAA71BB531A28 /* Pods-CSGO-CSGOUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGO-CSGOUITests.release.xcconfig"; path = "Target Support Files/Pods-CSGO-CSGOUITests/Pods-CSGO-CSGOUITests.release.xcconfig"; sourceTree = "<group>"; };
 		98E5A60322598CEF96917560 /* Pods-CSGO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGO.release.xcconfig"; path = "Target Support Files/Pods-CSGO/Pods-CSGO.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +200,7 @@
 		5198D3C62892BFE8007531BF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5198D3DA2892D233007531BF /* Main */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -242,6 +253,18 @@
 				5198D3D82892CDE7007531BF /* ClearNavigationTheme.swift */,
 			);
 			path = Themes;
+			sourceTree = "<group>";
+		};
+		5198D3DA2892D233007531BF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5198D3DC2892D25C007531BF /* CSMainViewControllerInterfaces.swift */,
+				5198D3DD2892D25C007531BF /* CSMainViewControllerViewModel.swift */,
+				5198D3DE2892D25C007531BF /* CSMainViewControllerViewController.swift */,
+				5198D3E02892D25C007531BF /* CSMainViewControllerViewController.xib */,
+				5198D3E12892D25C007531BF /* CSMainViewControllerWireframe.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		F6242E6DD01C880CB72FF98A /* Pods */ = {
@@ -366,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5198D3E62892D25C007531BF /* CSMainViewControllerViewController.xib in Resources */,
 				5198D3A12892BF30007531BF /* LaunchScreen.storyboard in Resources */,
 				5198D39E2892BF30007531BF /* Assets.xcassets in Resources */,
 				5198D39C2892BF2E007531BF /* Main.storyboard in Resources */,
@@ -499,10 +523,14 @@
 				5198D3992892BF2E007531BF /* ViewController.swift in Sources */,
 				5198D3952892BF2E007531BF /* AppDelegate.swift in Sources */,
 				5198D3CB2892C6E2007531BF /* ViewInterface.swift in Sources */,
+				5198D3E22892D25C007531BF /* CSMainViewControllerInterfaces.swift in Sources */,
+				5198D3E42892D25C007531BF /* CSMainViewControllerViewController.swift in Sources */,
 				5198D3D22892CBEA007531BF /* BaseWireframe.swift in Sources */,
 				5198D3972892BF2E007531BF /* SceneDelegate.swift in Sources */,
 				5198D3CD2892C738007531BF /* ViewModelInterface.swift in Sources */,
+				5198D3E32892D25C007531BF /* CSMainViewControllerViewModel.swift in Sources */,
 				5198D3D42892CC18007531BF /* CSUINavigationController.swift in Sources */,
+				5198D3E72892D25C007531BF /* CSMainViewControllerWireframe.swift in Sources */,
 				5198D3D92892CDE7007531BF /* ClearNavigationTheme.swift in Sources */,
 				5198D3D72892CDAF007531BF /* DefaultNavigationTheme.swift in Sources */,
 			);
