@@ -9,15 +9,17 @@ import UIKit
 
 class MainViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+  @IBOutlet weak var mainView: UIView!
+  @IBOutlet weak var statusView: UIView!
+  @IBOutlet weak var statusLabel: UILabel!
+  @IBOutlet weak var team1ImageView: UIImageView!
+  @IBOutlet weak var team1Label: UILabel!
+  @IBOutlet weak var team2ImageView: UIImageView!
+  @IBOutlet weak var team2Label: UILabel!
+  @IBOutlet weak var leagueImageView: UIImageView!
+  @IBOutlet weak var leagueLabel: UILabel!
+  
+  
+  static let cellIdentifier: String = "MainViewCell"
     
 }

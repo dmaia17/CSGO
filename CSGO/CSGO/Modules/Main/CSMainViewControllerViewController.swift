@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CSMainViewControllerViewController: UIViewController {
+final class CSMainViewControllerViewController: UIViewController, ClearNavigationTheme {
   
   // MARK: - Outlets
   
@@ -29,6 +29,12 @@ final class CSMainViewControllerViewController: UIViewController {
   // MARK: - Class Configurations  
 
   private func viewConfiguration() {
+    viewModel.configureTableView(tableView: tableView)
+    
+    tableView.delegate = self
+    tableView.dataSource = self
+    
+    reloadData()
   }
 
   // MARK: - UIActions
@@ -39,6 +45,18 @@ final class CSMainViewControllerViewController: UIViewController {
 
 // MARK: - Extensions
 
-extension CSMainViewControllerViewController: CSMainViewControllerViewInterface { }
+extension CSMainViewControllerViewController: CSMainViewControllerViewInterface {
+  func reloadData() {
+    tableView.reloadData()
+  }
+}
 
-extension CSMainViewControllerViewController: ClearNavigationTheme { }
+extension CSMainViewControllerViewController: UITableViewDelegate, UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return viewModel.numberOfRowsInSection()
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    return viewModel.cellForIndex(index: indexPath, tableView: tableView)
+  }
+}

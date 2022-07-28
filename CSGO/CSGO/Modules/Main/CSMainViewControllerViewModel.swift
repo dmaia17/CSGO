@@ -18,8 +18,6 @@ final class CSMainViewControllerViewModel {
 
   private weak var view: CSMainViewControllerViewInterface?
   private let wireframe: CSMainViewControllerWireframeInterface
-  
-  let navTitle = ""
     
   // MARK: - Lifecycle
 
@@ -31,4 +29,29 @@ final class CSMainViewControllerViewModel {
 
 // MARK: - Extensions
 
-extension CSMainViewControllerViewModel: CSMainViewControllerViewModelInterface { }
+extension CSMainViewControllerViewModel: CSMainViewControllerViewModelInterface {
+  func configureTableView(tableView: UITableView) {
+    let nib = UINib(nibName: "MainViewCell", bundle: nil)
+    tableView.register(nib, forCellReuseIdentifier: MainViewCell.cellIdentifier)
+    
+    tableView.sizeToFit()
+    tableView.contentInsetAdjustmentBehavior = .never
+    tableView.rowHeight = 192 //UITableView.automaticDimension
+    tableView.estimatedRowHeight = 192 //UITableView.automaticDimension
+    tableView.separatorStyle = .none
+    tableView.backgroundColor = .clear
+  }
+  
+  func numberOfRowsInSection() -> Int {
+    return 10
+  }
+  
+  func cellForIndex(index: IndexPath, tableView: UITableView) -> UITableViewCell {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: MainViewCell.cellIdentifier, for: index) as? MainViewCell else {
+      return UITableViewCell()
+    }
+    
+    cell.selectionStyle = .none
+    return cell
+  }
+}

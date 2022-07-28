@@ -13,8 +13,12 @@ protocol CSMainViewControllerWireframeInterface: WireframeInterface {
   func navigate(to option: CSMainViewControllerNavigationOption)
 }
 
-protocol CSMainViewControllerViewInterface: ViewInterface { }
+protocol CSMainViewControllerViewInterface: ViewInterface {
+  func reloadData()
+}
 
 protocol CSMainViewControllerViewModelInterface: ViewModelInterface {
-  var navTitle: String { get }
+  func configureTableView(tableView: UITableView)
+  func numberOfRowsInSection() -> Int
+  func cellForIndex(index: IndexPath, tableView: UITableView) -> UITableViewCell
 }
