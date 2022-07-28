@@ -21,5 +21,19 @@ class MainViewCell: UITableViewCell {
   
   
   static let cellIdentifier: String = "MainViewCell"
-    
+  
+  func setup() {
+    configBorders()
+  }
+  
+  private func configBorders() {
+    DispatchQueue.main.async {
+      self.mainView.roundCorners(corners: .allCorners, radius: 16)
+      self.team1ImageView.roundCorners(corners: .allCorners, radius: 30)
+      self.team2ImageView.roundCorners(corners: .allCorners, radius: 30)
+      self.leagueImageView.roundCorners(corners: .allCorners, radius: 8)
+      self.statusView.roundCorners(corners: .bottomLeft, radius: 16)
+    }
+  }
+  
 }

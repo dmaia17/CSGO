@@ -36,8 +36,8 @@ extension CSMainViewControllerViewModel: CSMainViewControllerViewModelInterface 
     
     tableView.sizeToFit()
     tableView.contentInsetAdjustmentBehavior = .never
-    tableView.rowHeight = 192 //UITableView.automaticDimension
-    tableView.estimatedRowHeight = 192 //UITableView.automaticDimension
+    tableView.rowHeight = 192
+    tableView.estimatedRowHeight = 192
     tableView.separatorStyle = .none
     tableView.backgroundColor = .clear
   }
@@ -52,6 +52,7 @@ extension CSMainViewControllerViewModel: CSMainViewControllerViewModelInterface 
     }
     
     cell.selectionStyle = .none
+    cell.setup()
     return cell
   }
 }
