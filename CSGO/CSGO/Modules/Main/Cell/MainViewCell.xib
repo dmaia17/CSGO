@@ -136,6 +136,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="leagueImageView" destination="R5m-ob-EhX" id="ILr-L5-yZ9"/>
                 <outlet property="leagueLabel" destination="qEf-7R-SZc" id="yZE-II-F1r"/>
