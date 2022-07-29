@@ -94,6 +94,8 @@ public class CSUINavigationController: UINavigationController {
         self.customizeBackButton(icon: vc.iconBackButton)
         self.hiddenNavigation(false)
         self.removeNavigationImage()
+        navigationBar.prefersLargeTitles = true
+        
       default:
         break
       }
@@ -103,6 +105,7 @@ public class CSUINavigationController: UINavigationController {
         appearance.configureWithOpaqueBackground()
         appearance.titleTextAttributes = vc.navigationTitleTextAttributes
         appearance.backgroundColor = vc.navigationBarBackgroundColor
+        appearance.largeTitleTextAttributes = vc.navigationTitleTextAttributes
         appearance.shadowColor = .clear
         self.navigationBar.standardAppearance = appearance
         self.navigationBar.scrollEdgeAppearance = appearance
@@ -123,6 +126,8 @@ public class CSUINavigationController: UINavigationController {
       if let action = vc.customRightButtonAction {
         self.configureCustomRightButton(with: viewController, action: action)
       }
+      
+      
     }
   }
   

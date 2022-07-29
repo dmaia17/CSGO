@@ -12,6 +12,7 @@ final class CSMainViewControllerViewModel {
   // MARK: - Enums
 
   enum Strings {
+    static let title = "Partidas"
   }
 
   // MARK: - Private properties  
@@ -23,6 +24,7 @@ final class CSMainViewControllerViewModel {
   private var matchList: [CSMatchModel] = []
   private var currentPage = 1
   private var loaded = false
+  let navTitle = Strings.title
     
   // MARK: - Lifecycle
 

@@ -31,6 +31,8 @@ final class CSMainViewControllerViewController: UIViewController, ClearNavigatio
   // MARK: - Class Configurations  
 
   private func viewConfiguration() {
+    title = viewModel.navTitle
+    
     loadingView.isHidden = true
     viewModel.configureTableView(tableView: tableView)
     

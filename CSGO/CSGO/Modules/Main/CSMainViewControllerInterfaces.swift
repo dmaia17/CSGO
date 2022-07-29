@@ -19,6 +19,8 @@ protocol CSMainViewControllerViewInterface: ViewInterface {
 }
 
 protocol CSMainViewControllerViewModelInterface: ViewModelInterface {
+  var navTitle: String { get }
+  
   func configureTableView(tableView: UITableView)
   func numberOfRowsInSection() -> Int
   func cellForIndex(index: IndexPath, tableView: UITableView) -> UITableViewCell

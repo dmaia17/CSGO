@@ -11,6 +11,46 @@ public protocol ClearNavigationTheme: Themeable { }
 
 public extension ClearNavigationTheme {
   
+//  var iconBackButton: UIImage {
+//    return UIImage.init(named: "") ?? UIImage()
+//  }
+//
+//  var iconRightButton: UIImage {
+//    return UIImage.init(named: "") ?? UIImage()
+//  }
+//
+//  var navigationBarBackgroundColor: UIColor {
+//    return .clear
+//  }
+//
+//  var navigationBarTintColor: UIColor {
+//    return .clear
+//  }
+//
+//  var navigationTitleTextAttributes: [NSAttributedString.Key: Any] {
+//    return [.foregroundColor: UIColor.white]
+//  }
+//
+//  var navigationBarStyle: UIBarStyle {
+//    return .default
+//  }
+//
+//  var navigationBarTranslucent: Bool {
+//    return true
+//  }
+//
+//  var customBackButtonAction: Selector? {
+//    return nil
+//  }
+//
+//  var customRightButtonAction: Selector? {
+//    return nil
+//  }
+//
+//  var onboardingStepPercentage: Double? {
+//    return nil
+//  }
+  
   var iconBackButton: UIImage {
     return UIImage.init(named: "") ?? UIImage()
   }
@@ -18,13 +58,13 @@ public extension ClearNavigationTheme {
   var iconRightButton: UIImage {
     return UIImage.init(named: "") ?? UIImage()
   }
-
+  
   var navigationBarBackgroundColor: UIColor {
-    return .clear
+    return UIColor(red: 37.0/255, green: 37.0/255, blue: 37.0/255, alpha: 1.0)
   }
   
   var navigationBarTintColor: UIColor {
-    return .clear
+    return .white 
   }
   
   var navigationTitleTextAttributes: [NSAttributedString.Key: Any] {
@@ -36,7 +76,7 @@ public extension ClearNavigationTheme {
   }
   
   var navigationBarTranslucent: Bool {
-    return true
+    return false
   }
   
   var customBackButtonAction: Selector? {
@@ -44,10 +84,6 @@ public extension ClearNavigationTheme {
   }
   
   var customRightButtonAction: Selector? {
-    return nil
-  }
-  
-  var onboardingStepPercentage: Double? {
     return nil
   }
 }
