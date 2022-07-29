@@ -10,6 +10,8 @@
 		0AEBBC92F4B8DB426AF76B8F /* Pods_CSGO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB3097389FA6BC23A4B2CB3 /* Pods_CSGO.framework */; };
 		510925BD2892EBDD004867DE /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510925BB2892EBDD004867DE /* MainViewCell.swift */; };
 		510925BE2892EBDD004867DE /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510925BC2892EBDD004867DE /* MainViewCell.xib */; };
+		512AF9C3289360E500F36551 /* CSMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9C2289360E500F36551 /* CSMainService.swift */; };
+		512AF9C52893616700F36551 /* CSMatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9C42893616700F36551 /* CSMatchModel.swift */; };
 		512B185B2892F9D500C16107 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512B185A2892F9D500C16107 /* UIView.swift */; };
 		5198D3952892BF2E007531BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3942892BF2E007531BF /* AppDelegate.swift */; };
 		5198D3972892BF2E007531BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3962892BF2E007531BF /* SceneDelegate.swift */; };
@@ -58,6 +60,8 @@
 		285BBE9C4A7975D2B870693F /* Pods-CSGO-CSGOUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGO-CSGOUITests.debug.xcconfig"; path = "Target Support Files/Pods-CSGO-CSGOUITests/Pods-CSGO-CSGOUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		510925BB2892EBDD004867DE /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
 		510925BC2892EBDD004867DE /* MainViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
+		512AF9C2289360E500F36551 /* CSMainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSMainService.swift; sourceTree = "<group>"; };
+		512AF9C42893616700F36551 /* CSMatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSMatchModel.swift; sourceTree = "<group>"; };
 		512B185A2892F9D500C16107 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		5198D3912892BF2E007531BF /* CSGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5198D3942892BF2E007531BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 		5198D3C72892BFF2007531BF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				512AF9C42893616700F36551 /* CSMatchModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 		5198D3C82892BFFA007531BF /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				512AF9C2289360E500F36551 /* CSMainService.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -532,11 +538,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5198D3952892BF2E007531BF /* AppDelegate.swift in Sources */,
+				512AF9C52893616700F36551 /* CSMatchModel.swift in Sources */,
 				5198D3CB2892C6E2007531BF /* ViewInterface.swift in Sources */,
 				5198D3E22892D25C007531BF /* CSMainViewControllerInterfaces.swift in Sources */,
 				5198D3E42892D25C007531BF /* CSMainViewControllerViewController.swift in Sources */,
 				5198D3D22892CBEA007531BF /* BaseWireframe.swift in Sources */,
 				5198D3972892BF2E007531BF /* SceneDelegate.swift in Sources */,
+				512AF9C3289360E500F36551 /* CSMainService.swift in Sources */,
 				510925BD2892EBDD004867DE /* MainViewCell.swift in Sources */,
 				5198D3CD2892C738007531BF /* ViewModelInterface.swift in Sources */,
 				5198D3E32892D25C007531BF /* CSMainViewControllerViewModel.swift in Sources */,
