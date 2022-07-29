@@ -29,16 +29,19 @@ final class CSMainViewControllerWireframe: BaseWireframe {
   }
   
   // MARK: - Private Routing
-
+  
+  private func goToDetail(match: CSMatchModel) {
+    CSDetailViewControllerWireframe(navigationController: navigationController).show(with: .push, match: match)
+  }
 }
 
 // MARK: - Extensions
 
 extension CSMainViewControllerWireframe: CSMainViewControllerWireframeInterface {
   func navigate(to option: CSMainViewControllerNavigationOption) {
-    // switch option {
-    // case <#pattern#>:
-    //   <#code#>      
-    // }
+    switch option {
+    case .goToDetail(let match):
+      goToDetail(match: match)
+    }
   }
 }

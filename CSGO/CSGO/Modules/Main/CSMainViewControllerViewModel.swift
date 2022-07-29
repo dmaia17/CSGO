@@ -89,4 +89,8 @@ extension CSMainViewControllerViewModel: CSMainViewControllerViewModelInterface 
       view?.configTableLoading(isHidden: false)
     }
   }
+  
+  func selectRow(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    wireframe.navigate(to: .goToDetail(match: matchList[indexPath.row]))
+  }
 }

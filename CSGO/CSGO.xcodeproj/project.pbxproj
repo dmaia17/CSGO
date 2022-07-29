@@ -17,6 +17,11 @@
 		512AF9CD28941D6F00F36551 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9CC28941D6F00F36551 /* String.swift */; };
 		512AF9CF2894308000F36551 /* CSGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9CE2894308000F36551 /* CSGameModel.swift */; };
 		512AF9D12894348900F36551 /* CSOpponentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9D02894348900F36551 /* CSOpponentModel.swift */; };
+		512AF9D92894571100F36551 /* CSDetailViewControllerInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9D32894571100F36551 /* CSDetailViewControllerInterfaces.swift */; };
+		512AF9DA2894571100F36551 /* CSDetailViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9D42894571100F36551 /* CSDetailViewControllerViewModel.swift */; };
+		512AF9DB2894571100F36551 /* CSDetailViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9D52894571100F36551 /* CSDetailViewControllerViewController.swift */; };
+		512AF9DD2894571100F36551 /* CSDetailViewControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512AF9D72894571100F36551 /* CSDetailViewControllerViewController.xib */; };
+		512AF9DE2894571100F36551 /* CSDetailViewControllerWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9D82894571100F36551 /* CSDetailViewControllerWireframe.swift */; };
 		512B185B2892F9D500C16107 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512B185A2892F9D500C16107 /* UIView.swift */; };
 		5198D3952892BF2E007531BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3942892BF2E007531BF /* AppDelegate.swift */; };
 		5198D3972892BF2E007531BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3962892BF2E007531BF /* SceneDelegate.swift */; };
@@ -72,6 +77,11 @@
 		512AF9CC28941D6F00F36551 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		512AF9CE2894308000F36551 /* CSGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGameModel.swift; sourceTree = "<group>"; };
 		512AF9D02894348900F36551 /* CSOpponentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSOpponentModel.swift; sourceTree = "<group>"; };
+		512AF9D32894571100F36551 /* CSDetailViewControllerInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSDetailViewControllerInterfaces.swift; sourceTree = "<group>"; };
+		512AF9D42894571100F36551 /* CSDetailViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSDetailViewControllerViewModel.swift; sourceTree = "<group>"; };
+		512AF9D52894571100F36551 /* CSDetailViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSDetailViewControllerViewController.swift; sourceTree = "<group>"; };
+		512AF9D72894571100F36551 /* CSDetailViewControllerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSDetailViewControllerViewController.xib; sourceTree = "<group>"; };
+		512AF9D82894571100F36551 /* CSDetailViewControllerWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSDetailViewControllerWireframe.swift; sourceTree = "<group>"; };
 		512B185A2892F9D500C16107 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		5198D3912892BF2E007531BF /* CSGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5198D3942892BF2E007531BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +156,18 @@
 				510925BC2892EBDD004867DE /* MainViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		512AF9D2289456E600F36551 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				512AF9D32894571100F36551 /* CSDetailViewControllerInterfaces.swift */,
+				512AF9D42894571100F36551 /* CSDetailViewControllerViewModel.swift */,
+				512AF9D52894571100F36551 /* CSDetailViewControllerViewController.swift */,
+				512AF9D72894571100F36551 /* CSDetailViewControllerViewController.xib */,
+				512AF9D82894571100F36551 /* CSDetailViewControllerWireframe.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		5198D3882892BF2E007531BF = {
@@ -223,6 +245,7 @@
 		5198D3C62892BFE8007531BF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				512AF9D2289456E600F36551 /* Detail */,
 				5198D3DA2892D233007531BF /* Main */,
 			);
 			path = Modules;
@@ -425,6 +448,7 @@
 				510925BE2892EBDD004867DE /* MainViewCell.xib in Resources */,
 				5198D3A12892BF30007531BF /* LaunchScreen.storyboard in Resources */,
 				5198D39E2892BF30007531BF /* Assets.xcassets in Resources */,
+				512AF9DD2894571100F36551 /* CSDetailViewControllerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				512AF9DE2894571100F36551 /* CSDetailViewControllerWireframe.swift in Sources */,
 				512AF9CD28941D6F00F36551 /* String.swift in Sources */,
 				5198D3952892BF2E007531BF /* AppDelegate.swift in Sources */,
 				512AF9C52893616700F36551 /* CSMatchModel.swift in Sources */,
@@ -561,8 +586,11 @@
 				5198D3E42892D25C007531BF /* CSMainViewControllerViewController.swift in Sources */,
 				5198D3D22892CBEA007531BF /* BaseWireframe.swift in Sources */,
 				512AF9CB28941CD900F36551 /* Date.swift in Sources */,
+				512AF9DA2894571100F36551 /* CSDetailViewControllerViewModel.swift in Sources */,
 				5198D3972892BF2E007531BF /* SceneDelegate.swift in Sources */,
 				512AF9C3289360E500F36551 /* CSMainService.swift in Sources */,
+				512AF9DB2894571100F36551 /* CSDetailViewControllerViewController.swift in Sources */,
+				512AF9D92894571100F36551 /* CSDetailViewControllerInterfaces.swift in Sources */,
 				510925BD2892EBDD004867DE /* MainViewCell.swift in Sources */,
 				5198D3CD2892C738007531BF /* ViewModelInterface.swift in Sources */,
 				512AF9CF2894308000F36551 /* CSGameModel.swift in Sources */,

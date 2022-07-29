@@ -10,40 +10,25 @@ import UIKit
 public protocol DefaultNavigationTheme: Themeable { }
 
 public extension DefaultNavigationTheme {
-  var iconBackButton: UIImage {
-    return UIImage.init(named: "") ?? UIImage()
-  }
-  
-  var iconRightButton: UIImage {
-    return UIImage.init(named: "") ?? UIImage()
-  }
   
   var navigationBarBackgroundColor: UIColor {
-    return .white
+    return UIColor(red: 37.0/255, green: 37.0/255, blue: 37.0/255, alpha: 1.0)
   }
   
   var navigationBarTintColor: UIColor {
-    return .blue
+    return .white
   }
   
   var navigationTitleTextAttributes: [NSAttributedString.Key: Any] {
-    return [.foregroundColor: UIColor.black]
+    return [.foregroundColor: UIColor.white]
   }
   
   var navigationBarStyle: UIBarStyle {
-    return .black
+    return .default
   }
   
   var navigationBarTranslucent: Bool {
     return false
-  }
-  
-  var customBackButtonAction: Selector? {
-    return nil
-  }
-  
-  var customRightButtonAction: Selector? {
-    return nil
   }
 }
 

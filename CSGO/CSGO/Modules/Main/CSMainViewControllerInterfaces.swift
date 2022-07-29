@@ -7,7 +7,9 @@
 
 import UIKit
 
-enum CSMainViewControllerNavigationOption { }
+enum CSMainViewControllerNavigationOption {
+  case goToDetail(match: CSMatchModel)
+}
 
 protocol CSMainViewControllerWireframeInterface: WireframeInterface {
   func navigate(to option: CSMainViewControllerNavigationOption)
@@ -24,5 +26,6 @@ protocol CSMainViewControllerViewModelInterface: ViewModelInterface {
   func configureTableView(tableView: UITableView)
   func numberOfRowsInSection() -> Int
   func cellForIndex(index: IndexPath, tableView: UITableView) -> UITableViewCell
-  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forItemAt indexPath: IndexPath) 
+  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forItemAt indexPath: IndexPath)
+  func selectRow(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
 }

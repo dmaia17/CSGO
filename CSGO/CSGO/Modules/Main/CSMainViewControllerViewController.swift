@@ -38,8 +38,6 @@ final class CSMainViewControllerViewController: UIViewController, ClearNavigatio
     
     tableView.delegate = self
     tableView.dataSource = self
-    
-    reloadData()
   }
 
   // MARK: - UIActions
@@ -71,5 +69,9 @@ extension CSMainViewControllerViewController: UITableViewDelegate, UITableViewDa
   
   public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     viewModel.tableView(tableView, willDisplay: cell, forItemAt: indexPath)
+  }
+  
+  public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    viewModel.selectRow(tableView, didSelectRowAt: indexPath)
   }
 }

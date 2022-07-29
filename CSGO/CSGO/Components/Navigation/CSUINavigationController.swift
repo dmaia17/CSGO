@@ -14,17 +14,13 @@ public protocol Themeable {
   var navigationTitleTextAttributes: [NSAttributedString.Key : Any] { get }
   var navigationBarStyle: UIBarStyle { get }
   var navigationBarTranslucent: Bool { get }
-  var customBackButtonAction: Selector? { get }
-  var customRightButtonAction: Selector? { get }
-  var iconBackButton: UIImage { get }
-  var iconRightButton: UIImage { get }
 }
 
 public class CSUINavigationController: UINavigationController {
   
   // MARK: - Properties
   
-  public var statusBarStyle: UIStatusBarStyle = .default {
+  public var statusBarStyle: UIStatusBarStyle = .lightContent {
     didSet {
       self.setNeedsStatusBarAppearanceUpdate()
     }
@@ -87,15 +83,9 @@ public class CSUINavigationController: UINavigationController {
     if let vc = viewController as? Themeable {
       switch vc {
       case is DefaultNavigationTheme:
-        self.customizeBackButton(icon: vc.iconBackButton)
-        self.hiddenNavigation(false)
-        self.removeNavigationImage()
+        navigationBar.prefersLargeTitles = false
       case is ClearNavigationTheme:
-        self.customizeBackButton(icon: vc.iconBackButton)
-        self.hiddenNavigation(false)
-        self.removeNavigationImage()
         navigationBar.prefersLargeTitles = true
-        
       default:
         break
       }
@@ -111,23 +101,13 @@ public class CSUINavigationController: UINavigationController {
         self.navigationBar.scrollEdgeAppearance = appearance
       }
       
+      self.setNavigationBarHidden(false, animated: true)
       self.setNeedsStatusBarAppearanceUpdate()
       self.navigationBar.isTranslucent = vc.navigationBarTranslucent
       self.navigationBar.barTintColor = vc.navigationBarBackgroundColor
       self.navigationBar.tintColor = vc.navigationBarTintColor
       self.navigationBar.titleTextAttributes = vc.navigationTitleTextAttributes
-      
-      // Configure and replace back button to custom back if necessary
-      if let action = vc.customBackButtonAction {
-        self.configureCustomBackButton(with: viewController, action: action)
-      }
-      
-      // Configure and replace right button to custom action if necessary
-      if let action = vc.customRightButtonAction {
-        self.configureCustomRightButton(with: viewController, action: action)
-      }
-      
-      
+      self.navigationBar.topItem?.backButtonTitle = ""
     }
   }
   
@@ -141,15 +121,6 @@ public class CSUINavigationController: UINavigationController {
     navigationBar.shadowImage = UIImage()
   }
   
-  private func removeNavigationImage() {
-    navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-    removeNavigationShadow()
-  }
-  
-  private func hiddenNavigation(_ hidden: Bool) {
-    self.setNavigationBarHidden(hidden, animated: true)
-  }
-  
   private func removeBackButtonTitle(from viewController: UIViewController?) {
     let item = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
     viewController?.navigationItem.backBarButtonItem = item
@@ -158,17 +129,4 @@ public class CSUINavigationController: UINavigationController {
     viewController?.navigationController?.navigationBar.topItem?.backBarButtonItem = item
   }
 
-  private func configureCustomBackButton(with viewController: UIViewController?, action: Selector) {
-    let icon: UIImage? = (viewController as? Themeable)?.iconBackButton
-    let customBackButton = UIBarButtonItem(image: icon, style: .plain, target: viewController, action: action)
-    
-    viewController?.navigationItem.leftBarButtonItem = customBackButton
-  }
-  
-  private func configureCustomRightButton(with viewController: UIViewController?, action: Selector) {
-    let icon: UIImage? = (viewController as? Themeable)?.iconRightButton
-    let customRightButton = UIBarButtonItem(image: icon, style: .plain, target: viewController, action: action)
-    
-    viewController?.navigationItem.rightBarButtonItem = customRightButton
-  }
 }
