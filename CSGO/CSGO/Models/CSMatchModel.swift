@@ -8,13 +8,13 @@
 import Foundation
 
 struct CSMatchModel: Codable {
-  var name: String = ""
-  
-  init() {}
+  var id: Int
+  var league: CSLeagueModel?
   
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
     
-    self.name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
+    self.id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
+    self.league = try container.decodeIfPresent(CSLeagueModel.self, forKey: .league) ?? nil
   }
 }

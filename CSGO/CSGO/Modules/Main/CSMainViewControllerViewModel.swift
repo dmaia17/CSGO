@@ -18,18 +18,38 @@ final class CSMainViewControllerViewModel {
 
   private weak var view: CSMainViewControllerViewInterface?
   private let wireframe: CSMainViewControllerWireframeInterface
+  private let service: CSMainServiceProtocol
+  
+  private var matchList: [CSMatchModel] = []
     
   // MARK: - Lifecycle
 
-  init(wireframe: CSMainViewControllerWireframeInterface, view: CSMainViewControllerViewInterface) {
+  init(wireframe: CSMainViewControllerWireframeInterface, view: CSMainViewControllerViewInterface, service: CSMainServiceProtocol) {
     self.wireframe = wireframe
     self.view = view
+    self.service = service
+  }
+  
+  private func getMatchesFromService() {
+    service.getMatches(successCallback: { [weak self] response in
+      self?.matchList = response
+      self?.view?.reloadData()
+      self?.view?.fullScreenLoading(hide: true)
+    }, failureCallback: { [weak self] in
+      print("TODO: Show error message")
+      self?.view?.fullScreenLoading(hide: true)
+    })
   }
 }
 
 // MARK: - Extensions
 
 extension CSMainViewControllerViewModel: CSMainViewControllerViewModelInterface {
+  func viewDidLoad() {
+    view?.fullScreenLoading(hide: false)
+     getMatchesFromService()
+  }
+  
   func configureTableView(tableView: UITableView) {
     let nib = UINib(nibName: "MainViewCell", bundle: nil)
     tableView.register(nib, forCellReuseIdentifier: MainViewCell.cellIdentifier)
@@ -43,7 +63,7 @@ extension CSMainViewControllerViewModel: CSMainViewControllerViewModelInterface 
   }
   
   func numberOfRowsInSection() -> Int {
-    return 10
+    return matchList.count
   }
   
   func cellForIndex(index: IndexPath, tableView: UITableView) -> UITableViewCell {
@@ -52,7 +72,7 @@ extension CSMainViewControllerViewModel: CSMainViewControllerViewModelInterface 
     }
     
     cell.selectionStyle = .none
-    cell.setup()
+    cell.setup(match: matchList[index.row])
     return cell
   }
 }

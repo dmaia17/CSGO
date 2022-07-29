@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SGImageCache
 
 class MainViewCell: UITableViewCell {
 
@@ -19,11 +20,13 @@ class MainViewCell: UITableViewCell {
   @IBOutlet weak var leagueImageView: UIImageView!
   @IBOutlet weak var leagueLabel: UILabel!
   
-  
   static let cellIdentifier: String = "MainViewCell"
   
-  func setup() {
+  func setup(match: CSMatchModel) {
     configBorders()
+    
+    leagueImageView.setImageForURL(match.league?.image_url ?? "")
+    leagueLabel.text = match.league?.name
   }
   
   private func configBorders() {

@@ -24,6 +24,7 @@ final class CSMainViewControllerViewController: UIViewController, ClearNavigatio
   override func viewDidLoad() {
     super.viewDidLoad()
     self.viewConfiguration()
+    viewModel.viewDidLoad()
   }
   
   // MARK: - Class Configurations  
