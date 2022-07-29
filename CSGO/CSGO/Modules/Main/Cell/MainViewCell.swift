@@ -20,10 +20,31 @@ class MainViewCell: UITableViewCell {
   @IBOutlet weak var leagueImageView: UIImageView!
   @IBOutlet weak var leagueLabel: UILabel!
   
+  enum Strings {
+    static let running = "AGORA"
+    static let today = "HOJE"
+    static let timeFormat = "%@, %@"
+  }
+  
   static let cellIdentifier: String = "MainViewCell"
   
   func setup(match: CSMatchModel) {
     configBorders()
+    
+    if match.status == .running {
+      statusLabel.text = Strings.running
+    } else {
+      let date = match.begin_at.toDate() ?? .now
+      let ismore = date.isMoreSevenDay
+      
+      if date.isInToday {
+        statusLabel.text = String(format: Strings.timeFormat, Strings.today, date.hourAndMin())
+      } else if date.isMoreSevenDay {
+        statusLabel.text = String(format: Strings.timeFormat, date.dayAndMonth(), date.hourAndMin())
+      } else {
+        statusLabel.text = String(format: Strings.timeFormat, date.dayName().uppercased(), date.hourAndMin())
+      }
+    }
     
     leagueImageView.setImageForURL(match.league?.image_url ?? "")
     leagueLabel.text = match.league?.name
@@ -38,5 +59,4 @@ class MainViewCell: UITableViewCell {
       self.statusView.roundCorners(corners: .bottomLeft, radius: 16)
     }
   }
-  
 }

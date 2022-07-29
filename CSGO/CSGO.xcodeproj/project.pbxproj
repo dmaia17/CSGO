@@ -13,6 +13,8 @@
 		512AF9C3289360E500F36551 /* CSMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9C2289360E500F36551 /* CSMainService.swift */; };
 		512AF9C52893616700F36551 /* CSMatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9C42893616700F36551 /* CSMatchModel.swift */; };
 		512AF9C72893662500F36551 /* CSLeagueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9C62893662500F36551 /* CSLeagueModel.swift */; };
+		512AF9CB28941CD900F36551 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9CA28941CD900F36551 /* Date.swift */; };
+		512AF9CD28941D6F00F36551 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9CC28941D6F00F36551 /* String.swift */; };
 		512B185B2892F9D500C16107 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512B185A2892F9D500C16107 /* UIView.swift */; };
 		5198D3952892BF2E007531BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3942892BF2E007531BF /* AppDelegate.swift */; };
 		5198D3972892BF2E007531BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3962892BF2E007531BF /* SceneDelegate.swift */; };
@@ -64,6 +66,8 @@
 		512AF9C2289360E500F36551 /* CSMainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSMainService.swift; sourceTree = "<group>"; };
 		512AF9C42893616700F36551 /* CSMatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSMatchModel.swift; sourceTree = "<group>"; };
 		512AF9C62893662500F36551 /* CSLeagueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSLeagueModel.swift; sourceTree = "<group>"; };
+		512AF9CA28941CD900F36551 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		512AF9CC28941D6F00F36551 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		512B185A2892F9D500C16107 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		5198D3912892BF2E007531BF /* CSGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5198D3942892BF2E007531BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 			children = (
 				5198D3D02892CB98007531BF /* Navigation */,
 				512B185A2892F9D500C16107 /* UIView.swift */,
+				512AF9CA28941CD900F36551 /* Date.swift */,
+				512AF9CC28941D6F00F36551 /* String.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -540,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				512AF9CD28941D6F00F36551 /* String.swift in Sources */,
 				5198D3952892BF2E007531BF /* AppDelegate.swift in Sources */,
 				512AF9C52893616700F36551 /* CSMatchModel.swift in Sources */,
 				5198D3CB2892C6E2007531BF /* ViewInterface.swift in Sources */,
@@ -547,6 +554,7 @@
 				512AF9C72893662500F36551 /* CSLeagueModel.swift in Sources */,
 				5198D3E42892D25C007531BF /* CSMainViewControllerViewController.swift in Sources */,
 				5198D3D22892CBEA007531BF /* BaseWireframe.swift in Sources */,
+				512AF9CB28941CD900F36551 /* Date.swift in Sources */,
 				5198D3972892BF2E007531BF /* SceneDelegate.swift in Sources */,
 				512AF9C3289360E500F36551 /* CSMainService.swift in Sources */,
 				510925BD2892EBDD004867DE /* MainViewCell.swift in Sources */,

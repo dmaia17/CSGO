@@ -36,7 +36,7 @@ final class CSMainViewControllerViewModel {
       self?.view?.reloadData()
       self?.view?.fullScreenLoading(hide: true)
     }, failureCallback: { [weak self] in
-      print("TODO: Show error message")
+      print("[CSGO] TODO: Show error message")
       self?.view?.fullScreenLoading(hide: true)
     })
   }

@@ -23,16 +23,17 @@ class CSMainService {
 
 extension CSMainService: CSMainServiceProtocol {
   func getMatches(successCallback: @escaping ([CSMatchModel]) -> Void, failureCallback: @escaping () -> Void) {
-    AF.request("https://api.pandascore.co/csgo/matches?sort=name&page=1&per_page=50", headers: createHeader())
+    AF.request("https://api.pandascore.co/csgo/matches?sort=-status,begin_at&filter[status]=not_started,running&page=1&per_page=50", headers: createHeader())
       .validate()
       .responseDecodable(of: [CSMatchModel].self) { response in
+        print("CSGO: \(response)")
         guard let matchModel = response.value else {
           print(response)
           failureCallback()
           return
         }
         
-        print(matchModel)
+        print("[CSGO] \(matchModel)")
         successCallback(matchModel)
       }
   }

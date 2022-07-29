@@ -20,10 +20,10 @@
                         <rect key="frame" x="16" y="8" width="283" height="176"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5S-7y-wKY">
-                                <rect key="frame" x="240" y="0.0" width="43" height="24"/>
+                                <rect key="frame" x="233" y="0.0" width="50" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGORA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIG-8E-Zah">
-                                        <rect key="frame" x="7" y="7" width="29.5" height="10"/>
+                                        <rect key="frame" x="10.5" y="7" width="29.5" height="10"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="8"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -33,7 +33,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="M6J-pd-yuw"/>
                                     <constraint firstItem="NIG-8E-Zah" firstAttribute="centerY" secondItem="A5S-7y-wKY" secondAttribute="centerY" id="Y2e-Qg-jJ3"/>
-                                    <constraint firstAttribute="width" constant="43" id="x3L-22-HSi"/>
+                                    <constraint firstAttribute="width" constant="50" id="x3L-22-HSi"/>
                                     <constraint firstItem="NIG-8E-Zah" firstAttribute="centerX" secondItem="A5S-7y-wKY" secondAttribute="centerX" id="yW3-LR-9NH"/>
                                 </constraints>
                             </view>
