@@ -15,10 +15,12 @@ protocol CSMainViewControllerWireframeInterface: WireframeInterface {
 
 protocol CSMainViewControllerViewInterface: ViewInterface {
   func reloadData()
+  func configTableLoading(isHidden: Bool)
 }
 
 protocol CSMainViewControllerViewModelInterface: ViewModelInterface {
   func configureTableView(tableView: UITableView)
   func numberOfRowsInSection() -> Int
   func cellForIndex(index: IndexPath, tableView: UITableView) -> UITableViewCell
+  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forItemAt indexPath: IndexPath) 
 }

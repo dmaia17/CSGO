@@ -12,7 +12,7 @@ protocol CSMainServiceProtocol {
    * Endpoint: https://api.pandascore.co/csgo/matches
    * Type: GET
    */
-  func getMatches(successCallback: @escaping ([CSMatchModel]) -> Void, failureCallback: @escaping () -> Void)
+  func getMatches(page: Int, successCallback: @escaping ([CSMatchModel]) -> Void, failureCallback: @escaping () -> Void)
 }
 
 class CSMainService {
@@ -22,8 +22,8 @@ class CSMainService {
 }
 
 extension CSMainService: CSMainServiceProtocol {
-  func getMatches(successCallback: @escaping ([CSMatchModel]) -> Void, failureCallback: @escaping () -> Void) {
-    AF.request("https://api.pandascore.co/csgo/matches?sort=-status,begin_at&filter[status]=not_started,running&page=1&per_page=50", headers: createHeader())
+  func getMatches(page: Int, successCallback: @escaping ([CSMatchModel]) -> Void, failureCallback: @escaping () -> Void) {
+    AF.request("https://api.pandascore.co/csgo/matches?sort=-status,begin_at&filter[status]=not_started,running&page=\(page)&per_page=50", headers: createHeader())
       .validate()
       .responseDecodable(of: [CSMatchModel].self) { response in
         print("CSGO: \(response)")

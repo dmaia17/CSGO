@@ -32,7 +32,7 @@ public extension Date {
     return Calendar.current.isDateInToday(self)
   }
   
-  var isMoreSevenDay: Bool {
+  var isMoreThanSevenDay: Bool {
     let components = Calendar.current.dateComponents([.day], from: Date(), to: self)
     
     guard let differenceDay = components.day else {

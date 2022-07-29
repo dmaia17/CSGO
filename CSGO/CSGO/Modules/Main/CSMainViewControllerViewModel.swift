@@ -21,6 +21,8 @@ final class CSMainViewControllerViewModel {
   private let service: CSMainServiceProtocol
   
   private var matchList: [CSMatchModel] = []
+  private var currentPage = 1
+  private var loaded = false
     
   // MARK: - Lifecycle
 
@@ -31,9 +33,11 @@ final class CSMainViewControllerViewModel {
   }
   
   private func getMatchesFromService() {
-    service.getMatches(successCallback: { [weak self] response in
-      self?.matchList = response
+    service.getMatches(page: currentPage, successCallback: { [weak self] response in
+      self?.loaded = response.isEmpty
+      self?.matchList.append(contentsOf: response)
       self?.view?.reloadData()
+      self?.view?.configTableLoading(isHidden: true)
       self?.view?.fullScreenLoading(hide: true)
     }, failureCallback: { [weak self] in
       print("[CSGO] TODO: Show error message")
@@ -47,7 +51,7 @@ final class CSMainViewControllerViewModel {
 extension CSMainViewControllerViewModel: CSMainViewControllerViewModelInterface {
   func viewDidLoad() {
     view?.fullScreenLoading(hide: false)
-     getMatchesFromService()
+    getMatchesFromService()
   }
   
   func configureTableView(tableView: UITableView) {
@@ -74,5 +78,13 @@ extension CSMainViewControllerViewModel: CSMainViewControllerViewModelInterface 
     cell.selectionStyle = .none
     cell.setup(match: matchList[index.row])
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forItemAt indexPath: IndexPath) {
+    if indexPath.row == self.matchList.count - 1 && !loaded {
+      currentPage += currentPage
+      getMatchesFromService()
+      view?.configTableLoading(isHidden: false)
+    }
   }
 }

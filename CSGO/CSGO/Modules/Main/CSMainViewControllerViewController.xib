@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CSMainViewControllerViewController" customModule="CSGO" customModuleProvider="target">
             <connections>
+                <outlet property="loadingView" destination="6RR-uM-3eu" id="Ftg-FX-nfr"/>
                 <outlet property="tableView" destination="tw1-qL-vax" id="W9s-Cf-Dmb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,21 +25,27 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tw1-qL-vax">
-                    <rect key="frame" x="0.0" y="126.5" width="375" height="524.5"/>
+                    <rect key="frame" x="0.0" y="126.5" width="375" height="496.5"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="6RR-uM-3eu">
+                    <rect key="frame" x="177.5" y="631" width="20" height="20"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="tw1-qL-vax" secondAttribute="bottom" constant="16" id="2B4-v5-rPV"/>
+                <constraint firstAttribute="bottom" secondItem="6RR-uM-3eu" secondAttribute="bottom" constant="16" id="Cnq-nF-4XM"/>
                 <constraint firstItem="t4t-6r-clb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="MVv-gR-VBI"/>
                 <constraint firstItem="t4t-6r-clb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="NH8-U3-9Df"/>
                 <constraint firstItem="tw1-qL-vax" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PCS-EX-2UH"/>
                 <constraint firstItem="tw1-qL-vax" firstAttribute="top" secondItem="t4t-6r-clb" secondAttribute="bottom" constant="24" id="ReT-yS-kAe"/>
                 <constraint firstAttribute="trailing" secondItem="tw1-qL-vax" secondAttribute="trailing" id="Ux2-fz-jgd"/>
+                <constraint firstItem="6RR-uM-3eu" firstAttribute="top" secondItem="tw1-qL-vax" secondAttribute="bottom" constant="8" id="osr-gG-kiY"/>
                 <constraint firstAttribute="trailing" secondItem="t4t-6r-clb" secondAttribute="trailing" constant="24" id="rQA-tT-1hc"/>
+                <constraint firstItem="6RR-uM-3eu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="y4X-UL-d07"/>
             </constraints>
             <point key="canvasLocation" x="136.80000000000001" y="152.47376311844079"/>
         </view>

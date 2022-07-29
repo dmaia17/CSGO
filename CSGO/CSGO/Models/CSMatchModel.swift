@@ -12,6 +12,8 @@ struct CSMatchModel: Codable {
   var league: CSLeagueModel?
   var status: MatchStatus
   var begin_at: String
+  var games: [CSGameModel]?
+  var opponents: [CSOpponentModel]?
   
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -20,6 +22,8 @@ struct CSMatchModel: Codable {
     self.league = try container.decodeIfPresent(CSLeagueModel.self, forKey: .league) ?? nil
     self.status = try container.decodeIfPresent(MatchStatus.self, forKey: .status) ?? .not_started
     self.begin_at = try container.decodeIfPresent(String.self, forKey: .begin_at) ?? ""
+    self.games = try container.decodeIfPresent([CSGameModel].self, forKey: .games) ?? nil
+    self.opponents = try container.decodeIfPresent([CSOpponentModel].self, forKey: .opponents) ?? nil
   }
 }
 

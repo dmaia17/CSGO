@@ -12,6 +12,7 @@ final class CSMainViewControllerViewController: UIViewController, ClearNavigatio
   // MARK: - Outlets
   
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var loadingView: UIActivityIndicatorView!
   
   // MARK: - Class properties
   
@@ -30,6 +31,7 @@ final class CSMainViewControllerViewController: UIViewController, ClearNavigatio
   // MARK: - Class Configurations  
 
   private func viewConfiguration() {
+    loadingView.isHidden = true
     viewModel.configureTableView(tableView: tableView)
     
     tableView.delegate = self
@@ -50,6 +52,10 @@ extension CSMainViewControllerViewController: CSMainViewControllerViewInterface 
   func reloadData() {
     tableView.reloadData()
   }
+  
+  func configTableLoading(isHidden: Bool) {
+    loadingView.isHidden = isHidden
+  }
 }
 
 extension CSMainViewControllerViewController: UITableViewDelegate, UITableViewDataSource {
@@ -59,5 +65,9 @@ extension CSMainViewControllerViewController: UITableViewDelegate, UITableViewDa
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     return viewModel.cellForIndex(index: indexPath, tableView: tableView)
+  }
+  
+  public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    viewModel.tableView(tableView, willDisplay: cell, forItemAt: indexPath)
   }
 }
