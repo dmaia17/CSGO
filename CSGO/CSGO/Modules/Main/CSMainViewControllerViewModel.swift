@@ -42,8 +42,8 @@ final class CSMainViewControllerViewModel {
       self?.view?.configTableLoading(isHidden: true)
       self?.view?.fullScreenLoading(hide: true)
     }, failureCallback: { [weak self] in
-      print("[CSGO] TODO: Show error message")
       self?.view?.fullScreenLoading(hide: true)
+      self?.wireframe.navigate(to: .showGenericError)
     })
   }
 }
@@ -57,8 +57,8 @@ extension CSMainViewControllerViewModel: CSMainViewControllerViewModelInterface 
   }
   
   func configureTableView(tableView: UITableView) {
-    let nib = UINib(nibName: "MainViewCell", bundle: nil)
-    tableView.register(nib, forCellReuseIdentifier: MainViewCell.cellIdentifier)
+    let nib = UINib(nibName: "CSMainViewCell", bundle: nil)
+    tableView.register(nib, forCellReuseIdentifier: CSMainViewCell.cellIdentifier)
     
     tableView.sizeToFit()
     tableView.contentInsetAdjustmentBehavior = .never
@@ -73,7 +73,7 @@ extension CSMainViewControllerViewModel: CSMainViewControllerViewModelInterface 
   }
   
   func cellForIndex(index: IndexPath, tableView: UITableView) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: MainViewCell.cellIdentifier, for: index) as? MainViewCell else {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: CSMainViewCell.cellIdentifier, for: index) as? CSMainViewCell else {
       return UITableViewCell()
     }
     
@@ -91,8 +91,6 @@ extension CSMainViewControllerViewModel: CSMainViewControllerViewModelInterface 
   }
   
   func selectRow(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let m = matchList[indexPath.row]
-    let i = indexPath.row
     wireframe.navigate(to: .goToDetail(match: matchList[indexPath.row]))
   }
 }

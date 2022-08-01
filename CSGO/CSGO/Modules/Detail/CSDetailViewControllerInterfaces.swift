@@ -7,7 +7,9 @@
 
 import UIKit
 
-enum CSDetailViewControllerNavigationOption { }
+enum CSDetailViewControllerNavigationOption {
+  case showGenericError
+}
 
 enum CSDetailFiels {
   case team1Image

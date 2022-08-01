@@ -9,6 +9,7 @@ import UIKit
 
 enum CSMainViewControllerNavigationOption {
   case goToDetail(match: CSMatchModel)
+  case showGenericError
 }
 
 protocol CSMainViewControllerWireframeInterface: WireframeInterface {

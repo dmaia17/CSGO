@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0AEBBC92F4B8DB426AF76B8F /* Pods_CSGO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB3097389FA6BC23A4B2CB3 /* Pods_CSGO.framework */; };
-		510925BD2892EBDD004867DE /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510925BB2892EBDD004867DE /* MainViewCell.swift */; };
-		510925BE2892EBDD004867DE /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510925BC2892EBDD004867DE /* MainViewCell.xib */; };
+		510925BD2892EBDD004867DE /* CSMainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510925BB2892EBDD004867DE /* CSMainViewCell.swift */; };
+		510925BE2892EBDD004867DE /* CSMainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510925BC2892EBDD004867DE /* CSMainViewCell.xib */; };
 		512AF9C3289360E500F36551 /* CSServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9C2289360E500F36551 /* CSServiceProvider.swift */; };
 		512AF9C52893616700F36551 /* CSMatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9C42893616700F36551 /* CSMatchModel.swift */; };
 		512AF9C72893662500F36551 /* CSLeagueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AF9C62893662500F36551 /* CSLeagueModel.swift */; };
@@ -71,8 +71,8 @@
 		103490913A16FDA5B209D3FB /* Pods-CSGOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTests.debug.xcconfig"; path = "Target Support Files/Pods-CSGOTests/Pods-CSGOTests.debug.xcconfig"; sourceTree = "<group>"; };
 		24BE6E7178541B614744180B /* Pods-CSGO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGO.debug.xcconfig"; path = "Target Support Files/Pods-CSGO/Pods-CSGO.debug.xcconfig"; sourceTree = "<group>"; };
 		285BBE9C4A7975D2B870693F /* Pods-CSGO-CSGOUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGO-CSGOUITests.debug.xcconfig"; path = "Target Support Files/Pods-CSGO-CSGOUITests/Pods-CSGO-CSGOUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		510925BB2892EBDD004867DE /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
-		510925BC2892EBDD004867DE /* MainViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
+		510925BB2892EBDD004867DE /* CSMainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSMainViewCell.swift; sourceTree = "<group>"; };
+		510925BC2892EBDD004867DE /* CSMainViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSMainViewCell.xib; sourceTree = "<group>"; };
 		512AF9C2289360E500F36551 /* CSServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSServiceProvider.swift; sourceTree = "<group>"; };
 		512AF9C42893616700F36551 /* CSMatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSMatchModel.swift; sourceTree = "<group>"; };
 		512AF9C62893662500F36551 /* CSLeagueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSLeagueModel.swift; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 		510925BF2892EBE3004867DE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				510925BB2892EBDD004867DE /* MainViewCell.swift */,
-				510925BC2892EBDD004867DE /* MainViewCell.xib */,
+				510925BB2892EBDD004867DE /* CSMainViewCell.swift */,
+				510925BC2892EBDD004867DE /* CSMainViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -462,7 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5198D3E62892D25C007531BF /* CSMainViewControllerViewController.xib in Resources */,
-				510925BE2892EBDD004867DE /* MainViewCell.xib in Resources */,
+				510925BE2892EBDD004867DE /* CSMainViewCell.xib in Resources */,
 				5198D3A12892BF30007531BF /* LaunchScreen.storyboard in Resources */,
 				5198D39E2892BF30007531BF /* Assets.xcassets in Resources */,
 				512AF9DD2894571100F36551 /* CSDetailViewControllerViewController.xib in Resources */,
@@ -611,7 +611,7 @@
 				513E1A5C289825C3000BB986 /* CSDetailViewCell.swift in Sources */,
 				512AF9DB2894571100F36551 /* CSDetailViewControllerViewController.swift in Sources */,
 				512AF9D92894571100F36551 /* CSDetailViewControllerInterfaces.swift in Sources */,
-				510925BD2892EBDD004867DE /* MainViewCell.swift in Sources */,
+				510925BD2892EBDD004867DE /* CSMainViewCell.swift in Sources */,
 				5198D3CD2892C738007531BF /* ViewModelInterface.swift in Sources */,
 				512AF9CF2894308000F36551 /* CSGameModel.swift in Sources */,
 				5198D3E32892D25C007531BF /* CSMainViewControllerViewModel.swift in Sources */,

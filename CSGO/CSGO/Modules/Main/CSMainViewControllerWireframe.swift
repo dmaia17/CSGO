@@ -42,6 +42,8 @@ extension CSMainViewControllerWireframe: CSMainViewControllerWireframeInterface 
     switch option {
     case .goToDetail(let match):
       goToDetail(match: match)
+    case .showGenericError:
+      self.showGenericErrorAlert()
     }
   }
 }

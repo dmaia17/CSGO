@@ -36,5 +36,9 @@ final class CSDetailViewControllerWireframe: BaseWireframe {
 
 extension CSDetailViewControllerWireframe: CSDetailViewControllerWireframeInterface {
   func navigate(to option: CSDetailViewControllerNavigationOption) {
+    switch option {
+    case .showGenericError:
+      self.showGenericErrorAlert()
+    }
   }
 }

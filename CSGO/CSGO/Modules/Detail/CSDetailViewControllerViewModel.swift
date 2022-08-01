@@ -49,7 +49,7 @@ final class CSDetailViewControllerViewModel {
       self?.view?.reloadData()
     }, failureCallback: { [weak self] in
       self?.view?.fullScreenLoading(hide: true)
-      print("ERROR")
+      self?.wireframe.navigate(to: .showGenericError)
     })
   }
   

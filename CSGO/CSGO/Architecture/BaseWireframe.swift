@@ -50,6 +50,12 @@ class BaseWireframe {
       self.removePopGesture()
     }
   }
+  
+  func showGenericErrorAlert() {
+    let dialogMessage = UIAlertController(title: "Atenção!", message: "Ocorreu um erro, tente novamente!", preferredStyle: .alert)
+    dialogMessage.addAction(UIAlertAction(title: "Fechar", style: .default, handler: { (action) -> Void in }))
+    navigationController.present(dialogMessage, animated: true, completion: nil)
+  }
 }
 
 extension BaseWireframe: WireframeInterface {

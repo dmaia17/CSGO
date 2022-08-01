@@ -1,5 +1,5 @@
 //
-//  MainViewCell.swift
+//  CSMainViewCell.swift
 //  CSGO
 //
 //  Created by Daniel Maia dos Passos on 28/07/22.
@@ -8,7 +8,7 @@
 import UIKit
 import SGImageCache
 
-class MainViewCell: UITableViewCell {
+class CSMainViewCell: UITableViewCell {
 
   @IBOutlet weak var mainView: UIView!
   @IBOutlet weak var statusView: UIView!
@@ -26,7 +26,7 @@ class MainViewCell: UITableViewCell {
     static let timeFormat = "%@, %@"
   }
   
-  static let cellIdentifier: String = "MainViewCell"
+  static let cellIdentifier: String = "CSMainViewCell"
   
   func setup(match: CSMatchModel) {
     configBorders()
