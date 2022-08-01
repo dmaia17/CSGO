@@ -21,7 +21,7 @@ class CSDetailViewCell: UITableViewCell {
   @IBOutlet weak var secondPlayerNameLabel: UILabel!
   @IBOutlet weak var secondPlayerImageView: UIImageView!
   
-  private func setup(firstPlayer: CSPlayerModel?, secondPlayer: CSPlayerModel?) {
+  func setup(firstPlayer: CSPlayerModel?, secondPlayer: CSPlayerModel?) {
     configBorders()
     
     if let player = firstPlayer {
@@ -48,6 +48,8 @@ class CSDetailViewCell: UITableViewCell {
     DispatchQueue.main.async {
       self.firstPlayerView.roundCorners(corners: .allCorners, radius: 8)
       self.secondPlayerView.roundCorners(corners: .allCorners, radius: 8)
+      self.firstPlayerImageView.roundCorners(corners: .allCorners, radius: 8)
+      self.secondPlayerImageView.roundCorners(corners: .allCorners, radius: 8)
     }
   }
 }

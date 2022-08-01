@@ -26,10 +26,10 @@ final class CSDetailViewControllerViewModel {
   private let match: CSMatchModel
   
   let navTitle = Strings.title
-  private var team1Id: Int = 0
-  private var team2Id: Int = 0
-  private var team1List: [CSPlayerModel] = []
-  private var team2List: [CSPlayerModel] = []
+  private var firstTeamId: Int = 0
+  private var secondTeamId: Int = 0
+  private var firstPlayerList: [CSPlayerModel] = []
+  private var secondPlayerList: [CSPlayerModel] = []
     
   // MARK: - Lifecycle
 
@@ -41,16 +41,21 @@ final class CSDetailViewControllerViewModel {
   }
   
   private func getPlayers(team1: Int, team2: Int) {
+    view?.fullScreenLoading(hide: false)
+    
     service.getPlayers(team1: team1, team2: team2, successCallback: { [weak self] response in
+      self?.view?.fullScreenLoading(hide: true)
       self?.configLists(list: response)
-    }, failureCallback: {
+      self?.view?.reloadData()
+    }, failureCallback: { [weak self] in
+      self?.view?.fullScreenLoading(hide: true)
       print("ERROR")
     })
   }
   
   private func configLists(list: [CSPlayerModel]) {
-    team1List = list.filter { $0.current_team?.id == team1Id }
-    team2List = list.filter { $0.current_team?.id == team2Id }
+    firstPlayerList = list.filter { $0.current_team?.id == firstTeamId }
+    secondPlayerList = list.filter { $0.current_team?.id == secondTeamId }
   }
 }
 
@@ -86,10 +91,47 @@ extension CSDetailViewControllerViewModel: CSDetailViewControllerViewModelInterf
     }
     
     if let firstOpponent = firstOpponent, let secondOpponent = secondOpponent {
-      team1Id = firstOpponent.opponent?.id ?? 0
-      team2Id = secondOpponent.opponent?.id ?? 0
+      firstTeamId = firstOpponent.opponent?.id ?? 0
+      secondTeamId = secondOpponent.opponent?.id ?? 0
       
-      getPlayers(team1: team1Id, team2: team2Id)
+      getPlayers(team1: firstTeamId, team2: secondTeamId)
     }
+  }
+  
+  func configureTableView(tableView: UITableView) {
+    let nib = UINib(nibName: "CSDetailViewCell", bundle: nil)
+    tableView.register(nib, forCellReuseIdentifier: CSDetailViewCell.cellIdentifier)
+    
+    tableView.sizeToFit()
+    tableView.contentInsetAdjustmentBehavior = .never
+    tableView.rowHeight = 70
+    tableView.estimatedRowHeight = 70
+    tableView.separatorStyle = .none
+    tableView.backgroundColor = .clear
+  }
+  
+  func numberOfRowsInSection() -> Int {
+    return firstPlayerList.count > secondPlayerList.count ? firstPlayerList.count : secondPlayerList.count
+  }
+  
+  func cellForIndex(index: IndexPath, tableView: UITableView) -> UITableViewCell {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: CSDetailViewCell.cellIdentifier, for: index) as? CSDetailViewCell else {
+      return UITableViewCell()
+    }
+    
+    var firstPlayer: CSPlayerModel?
+    var secondPlayer: CSPlayerModel?
+    
+    if firstPlayerList.indices.contains(index.row) {
+      firstPlayer = firstPlayerList[index.row]
+    }
+    
+    if secondPlayerList.indices.contains(index.row) {
+      secondPlayer = secondPlayerList[index.row]
+    }
+    
+    cell.selectionStyle = .none
+    cell.setup(firstPlayer: firstPlayer, secondPlayer: secondPlayer)
+    return cell
   }
 }
