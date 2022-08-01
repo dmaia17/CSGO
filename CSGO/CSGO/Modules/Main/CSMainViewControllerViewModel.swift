@@ -19,7 +19,7 @@ final class CSMainViewControllerViewModel {
 
   private weak var view: CSMainViewControllerViewInterface?
   private let wireframe: CSMainViewControllerWireframeInterface
-  private let service: CSMainServiceProtocol
+  private let service: CSServiceProviderProtocol
   
   private var matchList: [CSMatchModel] = []
   private var currentPage = 1
@@ -28,7 +28,7 @@ final class CSMainViewControllerViewModel {
     
   // MARK: - Lifecycle
 
-  init(wireframe: CSMainViewControllerWireframeInterface, view: CSMainViewControllerViewInterface, service: CSMainServiceProtocol) {
+  init(wireframe: CSMainViewControllerWireframeInterface, view: CSMainViewControllerViewInterface, service: CSServiceProviderProtocol) {
     self.wireframe = wireframe
     self.view = view
     self.service = service
@@ -91,6 +91,8 @@ extension CSMainViewControllerViewModel: CSMainViewControllerViewModelInterface 
   }
   
   func selectRow(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let m = matchList[indexPath.row]
+    let i = indexPath.row
     wireframe.navigate(to: .goToDetail(match: matchList[indexPath.row]))
   }
 }

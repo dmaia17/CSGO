@@ -16,7 +16,7 @@ final class CSMainViewControllerWireframe: BaseWireframe {
   // MARK: - Module setup
 
   func configureModule(with viewController: CSMainViewControllerViewController) {
-    let viewModel = CSMainViewControllerViewModel(wireframe: self, view: viewController, service: CSMainService())
+    let viewModel = CSMainViewControllerViewModel(wireframe: self, view: viewController, service: CSServiceProvider())
     
     viewController.viewModel = viewModel
   }

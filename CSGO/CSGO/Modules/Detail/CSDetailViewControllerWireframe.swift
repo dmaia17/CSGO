@@ -16,7 +16,7 @@ final class CSDetailViewControllerWireframe: BaseWireframe {
   // MARK: - Module setup
 
   func configureModule(with viewController: CSDetailViewControllerViewController, match: CSMatchModel) {
-    let viewModel = CSDetailViewControllerViewModel(wireframe: self, view: viewController, match: match)
+    let viewModel = CSDetailViewControllerViewModel(wireframe: self, view: viewController, service: CSServiceProvider(), match: match)
     
     viewController.viewModel = viewModel
   }

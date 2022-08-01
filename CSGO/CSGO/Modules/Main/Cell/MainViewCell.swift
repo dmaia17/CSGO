@@ -35,6 +35,12 @@ class MainViewCell: UITableViewCell {
     
     if let opponents = match.opponents, !opponents.isEmpty, opponents.count > 1 {
       configOpponents(opponents: opponents)
+    } else {
+      team1ImageView.setImageForURL("")
+      team1Label.text = "--"
+      
+      team2ImageView.setImageForURL("")
+      team2Label.text = "--"
     }
   }
   
