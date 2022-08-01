@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SGImageCache
 
 class CSDetailViewCell: UITableViewCell {
 
@@ -20,6 +21,33 @@ class CSDetailViewCell: UITableViewCell {
   @IBOutlet weak var secondPlayerNameLabel: UILabel!
   @IBOutlet weak var secondPlayerImageView: UIImageView!
   
+  private func setup(firstPlayer: CSPlayerModel?, secondPlayer: CSPlayerModel?) {
+    configBorders()
+    
+    if let player = firstPlayer {
+      firstPlayerView.isHidden = false
+      firstPlayerNickLabel.text = player.slug
+      firstPlayerNameLabel.text = player.name
+      firstPlayerImageView.setImageForURL(player.image_url)
+    } else {
+      firstPlayerView.isHidden = true
+    }
+    
+    if let player = secondPlayer {
+      secondPlayerView.isHidden = false
+      secondPlayerNickLabel.text = player.slug
+      secondPlayerNameLabel.text = player.name
+      secondPlayerImageView.setImageForURL(player.image_url)
+    } else {
+      secondPlayerView.isHidden = true
+    }
+    
+  }
   
-  
+  private func configBorders() {
+    DispatchQueue.main.async {
+      self.firstPlayerView.roundCorners(corners: .allCorners, radius: 8)
+      self.secondPlayerView.roundCorners(corners: .allCorners, radius: 8)
+    }
+  }
 }
