@@ -8,3 +8,5 @@ Foi desenvolvido utilizando a arquitetura MVVM com uma outra camada (Wireframe) 
 O projeto possui a implementação de testes unitários que testa a camada view-model da tela de detalhes do app.
 
 Foi usada algumas dependências como o Alamofire para fazer as requisições e outra para fazer o cachê de imagens.
+
+Cada tela do app fica disponível dentro da pasta "Modules" e os testes unitários na classe "CSGODetailTests.swift"
