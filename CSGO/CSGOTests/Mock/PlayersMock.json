@@ -1,0 +1,42 @@
+[
+  {
+    "current_team": {
+      "id": 1,
+      "name": "Time 1",
+      "image_url": "https://cdn.pandascore.co/images/league/image/4610/900px-WePlay_Academy_League_allmode.png"
+    },
+    "name": "Player 1",
+    "image_url": "https://cdn.pandascore.co/images/league/image/4610/900px-WePlay_Academy_League_allmode.png",
+    "slug": "Sincere@april.biz"
+  },
+  {
+    "current_team": {
+      "id": 1,
+      "name": "Time 1",
+      "image_url": "https://cdn.pandascore.co/images/league/image/4610/900px-WePlay_Academy_League_allmode.png"
+    },
+    "name": "Player 2",
+    "image_url": "https://cdn.pandascore.co/images/league/image/4610/900px-WePlay_Academy_League_allmode.png",
+    "slug": "Sincere@april.biz"
+  },
+  {
+    "current_team": {
+      "id": 2,
+      "name": "Time 2",
+      "image_url": "https://cdn.pandascore.co/images/league/image/4610/900px-WePlay_Academy_League_allmode.png"
+    },
+    "name": "Player 3",
+    "image_url": "https://cdn.pandascore.co/images/league/image/4610/900px-WePlay_Academy_League_allmode.png",
+    "slug": "Sincere@april.biz"
+  },
+  {
+    "current_team": {
+      "id": 2,
+      "name": "Time 2",
+      "image_url": "https://cdn.pandascore.co/images/league/image/4610/900px-WePlay_Academy_League_allmode.png"
+    },
+    "name": "Player 4",
+    "image_url": "https://cdn.pandascore.co/images/league/image/4610/900px-WePlay_Academy_League_allmode.png",
+    "slug": "Sincere@april.biz"
+  }
+]

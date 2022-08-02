@@ -30,7 +30,15 @@ protocol CSDetailViewControllerViewInterface: ViewInterface {
 
 protocol CSDetailViewControllerViewModelInterface: ViewModelInterface {
   var navTitle: String { get }
+  var firstTeamId: Int { get set }
+  var secondTeamId: Int { get set }
+  var firstPlayerList: [CSPlayerModel] { get }
+  var secondPlayerList: [CSPlayerModel] { get }
   
+  func configLists(list: [CSPlayerModel])
+  func getOpponents() -> [CSOpponentModel]
+  
+  ///TableView
   func configureTableView(tableView: UITableView)
   func numberOfRowsInSection() -> Int
   func cellForIndex(index: IndexPath, tableView: UITableView) -> UITableViewCell

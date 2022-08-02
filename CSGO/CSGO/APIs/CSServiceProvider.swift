@@ -33,12 +33,10 @@ extension CSServiceProvider: CSServiceProviderProtocol {
       .validate()
       .responseDecodable(of: [CSMatchModel].self) { response in
         guard let matchModel = response.value else {
-          print(response)
           failureCallback()
           return
         }
         
-        print("[CSGO] \(matchModel)")
         successCallback(matchModel)
       }
   }
@@ -47,14 +45,11 @@ extension CSServiceProvider: CSServiceProviderProtocol {
     AF.request("https://api.pandascore.co/csgo/players?sort=name&filter[team_id]=\(team2),\(team1)", headers: createHeader())
       .validate()
       .responseDecodable(of: [CSPlayerModel].self) { response in
-        print("CSGO: \(response)")
         guard let players = response.value else {
-          print(response)
           failureCallback()
           return
         }
         
-        print("[CSGO] \(players)")
         successCallback(players)
       }
   }

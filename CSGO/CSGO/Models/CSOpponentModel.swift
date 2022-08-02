@@ -10,6 +10,8 @@ import Foundation
 struct CSOpponentModel: Codable {
   var opponent: CSOpponentDataModel?
   
+  init() {}
+  
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
     
@@ -18,9 +20,11 @@ struct CSOpponentModel: Codable {
 }
 
 struct CSOpponentDataModel: Codable {
-  var id: Int
-  var name: String
-  var image_url: String
+  var id: Int = 0
+  var name: String = ""
+  var image_url: String = ""
+  
+  init() {}
   
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)

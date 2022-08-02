@@ -8,12 +8,14 @@
 import Foundation
 
 struct CSMatchModel: Codable {
-  var id: Int
+  var id: Int = 0
   var league: CSLeagueModel?
-  var status: MatchStatus
-  var begin_at: String
+  var status: MatchStatus = .not_started
+  var begin_at: String = ""
   var games: [CSGameModel]?
   var opponents: [CSOpponentModel]?
+  
+  init() {}
   
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)

@@ -21,19 +21,19 @@ final class CSDetailViewControllerViewModel {
   // MARK: - Private properties  
 
   private weak var view: CSDetailViewControllerViewInterface?
-  private let wireframe: CSDetailViewControllerWireframeInterface
+  private let wireframe: CSDetailViewControllerWireframeInterface?
   private let service: CSServiceProviderProtocol
   private let match: CSMatchModel
   
   let navTitle = Strings.title
-  private var firstTeamId: Int = 0
-  private var secondTeamId: Int = 0
-  private var firstPlayerList: [CSPlayerModel] = []
-  private var secondPlayerList: [CSPlayerModel] = []
+  var firstTeamId: Int = 0
+  var secondTeamId: Int = 0
+  var firstPlayerList: [CSPlayerModel] = []
+  var secondPlayerList: [CSPlayerModel] = []
     
   // MARK: - Lifecycle
 
-  init(wireframe: CSDetailViewControllerWireframeInterface, view: CSDetailViewControllerViewInterface, service: CSServiceProviderProtocol, match: CSMatchModel) {
+  init(wireframe: CSDetailViewControllerWireframeInterface?, view: CSDetailViewControllerViewInterface?, service: CSServiceProviderProtocol, match: CSMatchModel) {
     self.wireframe = wireframe
     self.view = view
     self.match = match
@@ -49,13 +49,8 @@ final class CSDetailViewControllerViewModel {
       self?.view?.reloadData()
     }, failureCallback: { [weak self] in
       self?.view?.fullScreenLoading(hide: true)
-      self?.wireframe.navigate(to: .showGenericError)
+      self?.wireframe?.navigate(to: .showGenericError)
     })
-  }
-  
-  private func configLists(list: [CSPlayerModel]) {
-    firstPlayerList = list.filter { $0.current_team?.id == firstTeamId }
-    secondPlayerList = list.filter { $0.current_team?.id == secondTeamId }
   }
 }
 
@@ -63,17 +58,16 @@ final class CSDetailViewControllerViewModel {
 
 extension CSDetailViewControllerViewModel: CSDetailViewControllerViewModelInterface {
   func viewDidLoad() {
-    var firstOpponent: CSOpponentModel?
-    var secondOpponent: CSOpponentModel?
+    let opponents = getOpponents()
     
-    if let opponents = match.opponents, !opponents.isEmpty, opponents.count > 1 {
-      firstOpponent = opponents[0]
-      secondOpponent = opponents[1]
+    if !opponents.isEmpty {
+      let firstOpponent = opponents[0]
+      let secondOpponent = opponents[1]
       
-      view?.loadFields(field: .team1Image, data: firstOpponent?.opponent?.image_url ?? "")
-      view?.loadFields(field: .team1Name, data: firstOpponent?.opponent?.name ?? "")
-      view?.loadFields(field: .team2Image, data: secondOpponent?.opponent?.image_url ?? "")
-      view?.loadFields(field: .team2Name, data: secondOpponent?.opponent?.name ?? "")
+      view?.loadFields(field: .team1Image, data: firstOpponent.opponent?.image_url ?? "")
+      view?.loadFields(field: .team1Name, data: firstOpponent.opponent?.name ?? "")
+      view?.loadFields(field: .team2Image, data: secondOpponent.opponent?.image_url ?? "")
+      view?.loadFields(field: .team2Name, data: secondOpponent.opponent?.name ?? "")
     }
     
     if match.status == .running {
@@ -90,12 +84,25 @@ extension CSDetailViewControllerViewModel: CSDetailViewControllerViewModelInterf
       }
     }
     
-    if let firstOpponent = firstOpponent, let secondOpponent = secondOpponent {
-      firstTeamId = firstOpponent.opponent?.id ?? 0
-      secondTeamId = secondOpponent.opponent?.id ?? 0
+    if !opponents.isEmpty {
+      firstTeamId = opponents[0].opponent?.id ?? 0
+      secondTeamId = opponents[1].opponent?.id ?? 0
       
       getPlayers(team1: firstTeamId, team2: secondTeamId)
     }
+  }
+  
+  func getOpponents() -> [CSOpponentModel] {
+    if let opponents = match.opponents, !opponents.isEmpty, opponents.count > 1 {
+      return [opponents[0], opponents[1]]
+    } else {
+      return []
+    }
+  }
+  
+  func configLists(list: [CSPlayerModel]) {
+    firstPlayerList = list.filter { $0.current_team?.id == firstTeamId }
+    secondPlayerList = list.filter { $0.current_team?.id == secondTeamId }
   }
   
   func configureTableView(tableView: UITableView) {

@@ -68,5 +68,117 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09D0503C-3092-4814-9066-FE63C83E9859"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSGOTests/Base/CSBaseServiceMock.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(mockSuccessFile:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "09D0503C-3092-4814-9066-FE63C83E9859 - e0cab5288fb4b507"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CSGOTests.CSBaseServiceMock.init(mockSuccessFile: Swift.String) -&gt; CSGOTests.CSBaseServiceMock&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "CSGOTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielmaiadospassos/Documents/Projects/CSGO/CSGO/CSGOTests/Base/CSBaseServiceMock.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1082">
+               </Location>
+               <Location
+                  uuid = "09D0503C-3092-4814-9066-FE63C83E9859 - e0cab5288fb4b507"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CSGOTests.CSBaseServiceMock.init(mockSuccessFile: Swift.String) -&gt; CSGOTests.CSBaseServiceMock&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "CSGOTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielmaiadospassos/Documents/Projects/CSGO/CSGO/CSGOTests/Base/CSBaseServiceMock.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1146">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "906A6A15-5D28-495C-9DB1-7B0431C7B27F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSGOTests/Base/CSBaseServiceMock.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "init(mockSuccessFile:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "906A6A15-5D28-495C-9DB1-7B0431C7B27F - e0cab5288fb4b58b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CSGOTests.CSBaseServiceMock.init(mockSuccessFile: Swift.String) -&gt; CSGOTests.CSBaseServiceMock&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "CSGOTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielmaiadospassos/Documents/Projects/CSGO/CSGO/CSGOTests/Base/CSBaseServiceMock.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "738">
+               </Location>
+               <Location
+                  uuid = "906A6A15-5D28-495C-9DB1-7B0431C7B27F - e0cab5288fb4b58b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CSGOTests.CSBaseServiceMock.init(mockSuccessFile: Swift.String) -&gt; CSGOTests.CSBaseServiceMock&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "CSGOTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielmaiadospassos/Documents/Projects/CSGO/CSGO/CSGOTests/Base/CSBaseServiceMock.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "788">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E8748580-8A54-47B8-A7BC-39F1E1A020D3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSGO/Components/Decodable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "parse(textData:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
