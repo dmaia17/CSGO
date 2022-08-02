@@ -26,7 +26,7 @@ extension ViewInterface where Self: UIViewController {
       let screenWidth = screenSize.width
       let screenHeight = screenSize.height
       let view = UIView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight))
-      view.backgroundColor = UIColor(red: 37.0/255, green: 37.0/255, blue: 37.0/255, alpha: 1.0)
+      view.backgroundColor = .primary
       view.tag = tag
       
       let activityIndicator = UIActivityIndicatorView()

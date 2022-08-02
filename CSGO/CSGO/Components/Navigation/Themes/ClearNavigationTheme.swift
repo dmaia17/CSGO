@@ -12,7 +12,7 @@ public protocol ClearNavigationTheme: Themeable { }
 public extension ClearNavigationTheme {
   
   var navigationBarBackgroundColor: UIColor {
-    return UIColor(red: 37.0/255, green: 37.0/255, blue: 37.0/255, alpha: 1.0)
+    return .primary
   }
   
   var navigationBarTintColor: UIColor {

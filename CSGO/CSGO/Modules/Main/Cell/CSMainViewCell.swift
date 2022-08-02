@@ -56,10 +56,10 @@ class CSMainViewCell: UITableViewCell {
   
   private func configStatus(match: CSMatchModel) {
     if match.status == .running {
-      statusView.backgroundColor = UIColor(red: 244.0/255, green: 42.0/255, blue: 53.0/255, alpha: 1.0)
+      statusView.backgroundColor = .CSRed
       statusLabel.text = Strings.running
     } else {
-      statusView.backgroundColor = UIColor(red: 250.0/255, green: 250.0/255, blue: 250.0/255, alpha: 0.2)
+      statusView.backgroundColor = .CSGray
       let date = match.begin_at.toDate() ?? .now
       
       if date.isInToday {

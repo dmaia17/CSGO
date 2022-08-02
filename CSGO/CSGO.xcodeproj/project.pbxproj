@@ -30,6 +30,7 @@
 		513E1A662899669F000BB986 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E1A652899669F000BB986 /* Decodable.swift */; };
 		513E1A682899672B000BB986 /* CSServiceProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E1A672899672B000BB986 /* CSServiceProviderMock.swift */; };
 		513E1A6A28996A44000BB986 /* PlayersMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 513E1A6928996A44000BB986 /* PlayersMock.json */; };
+		513E1A6E289994F3000BB986 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E1A6D289994F3000BB986 /* UIColor.swift */; };
 		5198D3952892BF2E007531BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3942892BF2E007531BF /* AppDelegate.swift */; };
 		5198D3972892BF2E007531BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198D3962892BF2E007531BF /* SceneDelegate.swift */; };
 		5198D39E2892BF30007531BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5198D39D2892BF30007531BF /* Assets.xcassets */; };
@@ -97,6 +98,7 @@
 		513E1A652899669F000BB986 /* Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
 		513E1A672899672B000BB986 /* CSServiceProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSServiceProviderMock.swift; sourceTree = "<group>"; };
 		513E1A6928996A44000BB986 /* PlayersMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PlayersMock.json; sourceTree = "<group>"; };
+		513E1A6D289994F3000BB986 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		5198D3912892BF2E007531BF /* CSGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5198D3942892BF2E007531BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5198D3962892BF2E007531BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 				512AF9CA28941CD900F36551 /* Date.swift */,
 				512AF9CC28941D6F00F36551 /* String.swift */,
 				513E1A652899669F000BB986 /* Decodable.swift */,
+				513E1A6D289994F3000BB986 /* UIColor.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				512AF9CD28941D6F00F36551 /* String.swift in Sources */,
 				5198D3952892BF2E007531BF /* AppDelegate.swift in Sources */,
 				512AF9C52893616700F36551 /* CSMatchModel.swift in Sources */,
+				513E1A6E289994F3000BB986 /* UIColor.swift in Sources */,
 				512AF9E2289502D100F36551 /* CSPlayerModel.swift in Sources */,
 				5198D3CB2892C6E2007531BF /* ViewInterface.swift in Sources */,
 				5198D3E22892D25C007531BF /* CSMainViewControllerInterfaces.swift in Sources */,

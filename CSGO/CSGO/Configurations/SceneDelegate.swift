@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       )
       
       window.rootViewController = baseNavigationController
-      window.backgroundColor = UIColor(red: 37.0/255, green: 37.0/255, blue: 37.0/255, alpha: 1.0)
+      window.backgroundColor = .primary
       
       let module = CSMainViewControllerWireframe(navigationController: baseNavigationController)
       module.configureModule(with: baseNavigationController.viewControllers[0] as! CSMainViewControllerViewController)
